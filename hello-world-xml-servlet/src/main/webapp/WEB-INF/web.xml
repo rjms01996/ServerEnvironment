@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+        version="6.0" metadata-complete="false">
+
+
+        <servlet>
+                <servlet-name>HelloWorldXml</servlet-name>
+                <servlet-class>cat.institutmarianao.hello.world.xml.servlet.HelloWorldXml</servlet-class>
+        </servlet>
+        <servlet-mapping>
+                <servlet-name>HelloWorldXml</servlet-name>
+                <url-pattern>/HelloWorldXml</url-pattern>
+        </servlet-mapping>
+        
+        <session-config>
+                <session-timeout>
+                        30
+                </session-timeout>
+        </session-config>
+</web-app>
+
