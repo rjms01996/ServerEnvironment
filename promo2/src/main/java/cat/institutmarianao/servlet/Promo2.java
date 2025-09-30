@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -23,19 +24,25 @@ public class Promo2 extends HttpServlet {
         }
 
         @Override
-        public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		public void service(HttpServletRequest request, HttpServletResponse response)
+				throws IOException, ServletException {
 
                 String requestIp = request.getRemoteAddr();
+				RequestDispatcher rs;
 
                 if (ip.contains(requestIp)) {
 
                         // html redirect - rest of times
-                        response.sendRedirect("rest_times.html");
+						// response.sendRedirect("rest_times.html");
+						rs = request.getRequestDispatcher("rest_times.html");
+
                 } else {
 
                         // html redirect - first time
                         response.sendRedirect("first_time.html");
+						rs = request.getRequestDispatcher("first_time.html");
                         ip.add(requestIp);
                 }
+				rs.forward(request, response);
         }
 }

@@ -6,11 +6,7 @@
 
         <servlet>
                 <servlet-name>Promo</servlet-name>
-                <servlet-class>cat.institutmarianao.servlet.Promo</servlet-class>
-                <init-param>
-                        <param-name>url</param-name>
-                        <param-value>https://web.gencat.cat/en/inici/index.html</param-value>
-                </init-param>
+                <servlet-class>cat.institutmarianao.servlet.Promo2</servlet-class>
         </servlet>
 
         <servlet-mapping>
