@@ -36,13 +36,16 @@ public class Promo2 extends HttpServlet {
 						// response.sendRedirect("rest_times.html");
 						rs = request.getRequestDispatcher("rest_times.html");
 
+
                 } else {
 
                         // html redirect - first time
-                        response.sendRedirect("first_time.html");
+						// response.sendRedirect("first_time.html");
 						rs = request.getRequestDispatcher("first_time.html");
-                        ip.add(requestIp);
+						ip.add(requestIp);
                 }
 				rs.forward(request, response);
+
+
         }
 }
