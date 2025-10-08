@@ -17,6 +17,10 @@
                 <servlet-name>GuessColor2</servlet-name>
                 <url-pattern>/GuessColor2</url-pattern>
         </servlet-mapping>
+        
+         <welcome-file-list>
+                <welcome-file>GuessColor.html</welcome-file>
+        </welcome-file-list>
 
         <session-config>
                 <session-timeout>30</session-timeout>
